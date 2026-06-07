@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | LINART</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/Mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Portfolio | LINART</div>
+        <button id="menuBtn" class="menu-btn" aria-label="Toggle Navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" data-en="Home" data-kh="ទំព័រដើម">Home</a></li>
+            <li><a href="#about" data-en="About" data-kh="អំពីខ្ញុំ">About</a></li>
+            <li><a href="#skills" data-en="Skills" data-kh="ជំនាញ">Skills</a></li>
+            <li><a href="#projects" data-en="Projects" data-kh="គម្រោង">Projects</a></li>
+            <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a></li>
+        </ul>
+        <div class="actions" id="navActions">
+            <!-- <button id="langBtn" class="btn-action">KH</button> -->
+            <!-- <button id="themeBtn" class="btn-action">
+                <i class="fa-solid fa-moon"></i>
+            </button> -->
+        </div>
+    </nav>
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <div class="floating circle1"></div>
+        <div class="floating circle2"></div>
+        <div class="floating circle3"></div>
+        <div class="hero-container">
+            <!-- Profile Image -->
+            <div class="hero-image">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <img src="/image/linart.jpg" alt="LINART">
+                    <div class="status-badge">
+                        <span></span>
+                        Available
+                    </div>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="hero-content">
+                <span class="badge"><i class="fa-solid fa-hand-wave"></i> Hello, I'm linart</span>
+                <h1>LIN<span class="highlight">ART</span></h1>
+                <h2 id="role"
+                    data-en="Frontend Developer & UX/UI Designer"
+                    data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer">
+                    Frontend Developer & UX/UI Designer
+                </h2>
+                <p id="heroText"
+                data-en="Creating beautiful, responsive and user-friendly digital experiences."
+                data-kh="បង្កើតបទពិសោធន៍ឌីជីថលដែលស្រស់ស្អាត និងងាយស្រួលប្រើប្រាស់។">
+                    Creating beautiful, responsive and user-friendly digital experiences.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn primary">
+                        Download CV
+                    </a>
+                    <a href="#contact" class="btn secondary">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="about-header">
+            <span class="section-badge">
+                <i class="fa-solid fa-user"></i> About Me
+            </span>
+            <h2 class="section-title"
+                data-en="Who Am I?"
+                data-kh="ខ្ញុំជានរណា?">
+                Who Am I?
+            </h2>
+        </div>
+        <div class="about-container">
+            <!-- LEFT -->
+            <div class="about-image">
+                <div class="image-card">
+                    <img src="/image/lyn.jpg" alt="Lyn">
+                    <div class="experience-badge">
+                        <h3>1+</h3>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="about-content">
+                <h3
+                    data-en="Frontend Developer & UX/UI Designer"
+                    data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer">
+                    Frontend Developer & UX/UI Designer
+                </h3>
+                <p
+                    data-en="I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design. I focus on creating responsive websites, intuitive interfaces, and impactful user experiences."
+                    data-kh="ខ្ញុំមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលដ៏ស្រស់ស្អាតដោយប្រើបច្ចេកវិទ្យាវេបសាយទំនើប និងការរចនាដែលផ្តោតលើអ្នកប្រើប្រាស់។">
+                    I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design.
+                </p>
+                <!-- STATS -->
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>3+</h3>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>0+</h3>
+                        <p>Clients</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>100%</h3>
+                        <p>Passion</p>
+                    </div>
+                </div>
+
+                <!-- SKILLS -->
+                <div class="mini-skills">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Vue.js</span>
+                    <span>React</span>
+                    <span>Figma</span>
+                    <span>Photoshop</span>
+                </div>
+                <a href="#contact" class="about-btn">
+                    Hire Me →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills">
+        <div class="skills-header">
+            <span class="section-badge">
+                <i class="fa-solid fa-lightbulb"></i> My Expertise
+            </span>
+            <h2 class="section-title"
+                data-en="Technical Skills"
+                data-kh="ជំនាញបច្ចេកទេស">
+                Technical Skills
+            </h2>
+            <p class="skills-description">
+                Technologies and tools I use to build
+                modern websites and digital experiences.
+            </p>
+        </div>
+        <div class="skills-grid">
+            <!-- HTML -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    alt="HTML">
+                <h3>HTML5</h3>
+                <span>60%</span>
+                <div class="progress">
+                    <div class="progress-bar html"></div>
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    alt="CSS">
+                <h3>CSS3</h3>
+                <span>50%</span>
+                <div class="progress">
+                    <div class="progress-bar css"></div>
+                </div>
+            </div>
+
+            <!-- JS -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript">
+                <h3>JavaScript</h3>
+                <span>40%</span>
+                <div class="progress">
+                    <div class="progress-bar js"></div>
+                </div>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                    alt="Bootstrap">
+                <h3>Bootstrap</h3>
+                <span>40%</span>
+                <div class="progress">
+                    <div class="progress-bar bootstrap"></div>
+                </div>
+            </div>
+
+            <!-- Tailwind -->
+            <div class="skill-card">
+                <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+                    alt="Tailwind">
+                <h3>Tailwind CSS</h3>
+                <span>40%</span>
+                <div class="progress">
+                    <div class="progress-bar tailwind"></div>
+                </div>
+            </div>
+
+            <!-- Vue -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
+                    alt="Vue">
+                <h3>Vue.js</h3>
+                <span>30%</span>
+                <div class="progress">
+                    <div class="progress-bar vue"></div>
+                </div>
+            </div>
+
+            <!-- React -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React">
+                <h3>React</h3>
+                <span>30%</span>
+                <div class="progress">
+                    <div class="progress-bar react"></div>
+                </div>
+            </div>
+
+            <!-- Figma -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                    alt="Figma">
+                <h3>Figma</h3>
+                <span>50%</span>
+                <div class="progress">
+                    <div class="progress-bar figma"></div>
+                </div>
+            </div>
+
+            <!-- Photoshop -->
+            <div class="skill-card">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-original.svg"
+                    alt="Photoshop">
+                <h3>Photoshop</h3>
+                <span>50%</span>
+                <div class="progress">
+                    <div class="progress-bar photoshop"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+        <div class="projects-header">
+            <span class="section-badge">
+                <i class="fa-solid fa-rocket"></i> My Work
+            </span>
+            <h2 class="section-title"
+                data-en="Featured Projects"
+                data-kh="គម្រោងសំខាន់ៗ">
+                Featured Projects
+            </h2>
+            <p class="section-description"
+            data-en="A collection of projects showcasing my frontend development and UX/UI design skills."
+            data-kh="បណ្តុំគម្រោងដែលបង្ហាញពីជំនាញ Frontend Development និង UX/UI Design របស់ខ្ញុំ។">
+                A collection of projects showcasing my frontend development and UX/UI design skills.
+            </p>
+        </div>
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/image/E-Commerce.jpg" alt="E-Commerce UI">
+                    <span class="project-tag">
+                        UI Design
+                    </span>
+                </div>
+
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>
+                        Modern shopping experience with
+                        responsive design and smooth UX.
+                    </p>
+
+                    <div class="tech-stack">
+                        <span>Laravel</span>
+                        <span>Bootstrap</span>
+                        <span>MYSQL</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" class="btn-demo">
+                            Live Demo
+                        </a>
+                        <a href="#" class="btn-code">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/image/Profile.jpg" alt="Portfolio">
+                    <span class="project-tag">
+                        Portfolio
+                    </span>
+                </div>
+                <div class="project-content">
+                    <h3>Personal Portfolio</h3>
+                    <p>
+                        Responsive developer portfolio
+                        with dark/light mode.
+                    </p>
+                    <div class="tech-stack">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+
+                    <div class="project-buttons">
+                        <a href="#" class="btn-demo">
+                            Live Demo
+                        </a>
+                        <a href="#" class="btn-code">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="/image/cms.jpg" alt="CMS">
+                    <span class="project-tag">
+                        Admin Dashboard
+                    </span>
+                </div>
+                <div class="project-content">
+                    <h3>Content Management System</h3>
+                    <p>
+                        Post content and management
+                        dashboard for Websites.
+                    </p>
+                    <div class="tech-stack">
+                        <span>PHP</span>
+                        <span>Bootstrap</span>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="#" class="btn-demo">
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/sreylinou6-sudo/CMS_Project.git" class="btn-code">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="contact-header">
+            <span class="section-badge">
+                <i class="fa-regular fa-handshake"></i> Get In Touch
+            </span>
+            <h2 class="section-title"
+                data-en="Contact Me"
+                data-kh="ទាក់ទងមកខ្ញុំ">
+                Contact Me
+            </h2>
+            <p
+                data-en="Feel free to contact me for collaboration, freelance projects, or job opportunities."
+                data-kh="អ្នកអាចទាក់ទងមកខ្ញុំសម្រាប់ការសហការ ការងារ Freelance ឬឱកាសការងារផ្សេងៗ។">
+                Feel free to contact me for collaboration, freelance projects, or job opportunities.
+            </p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Info -->
+
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>sreylinou6@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+855 71 496 1269</p>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-location-dot"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Siem Reap, Cambodia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="https://formspree.io/f/mnqyljvd" method="POST">
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required>
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    required>
+                </textarea>
+                <button type="submit">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand -->
+            <div class="footer-section">
+                <h2>Portfolio | LINART</h2>
+                <p>
+                    Frontend Developer & UX/UI Designer passionate about
+                    creating modern, responsive and user-friendly digital
+                    experiences.
+                </p>
+            </div>
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fa-solid fa-map-pin"></i> Siem Reap, Cambodia</p>
+                <p><i class="fa-regular fa-envelope"></i> sreylinou6@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> +855 71 496 1269</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1KXekvp1Ln/?mibextid=wwXIfr"
+                    target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://github.com/sreylinou6-sudo"
+                    target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/sreylin-ou-1a00b4393"
+                    target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_sreylin_80?igsh=MTB6aXM4MGdzeDN4Zw%3D%3D&utm_source=qr"
+                    target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/ou_sreylin"
+                    target="_blank">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@_sreylin_80?_r=1&_t=ZS-95FiKUDwQYm"
+                    target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                © 2026 Portfolio | LINART. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

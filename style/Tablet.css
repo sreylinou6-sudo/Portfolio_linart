@@ -1,0 +1,28 @@
+/* ======= TABLET ====== */
+@media(max-width:992px){
+
+    .hero-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .hero-content p{
+        margin:auto;
+    }
+    .hero-buttons{
+        justify-content:center;
+    }
+    .hero-image{
+        order:-1;
+    }
+    .profile-ring{
+        width:340px;
+        height:340px;
+    }
+    .profile-wrapper img{
+        width:310px;
+        height:310px;
+    }
+    .hero-content h1{
+        font-size:3rem;
+    }
+}

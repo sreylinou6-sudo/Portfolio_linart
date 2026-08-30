@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "name": "LINART",
+    "role_en": "Frontend Developer & UX/UI Designer",
+    "role_kh": "អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer",
+    "email": "sreylinou6@gmail.com",
+    "phone": "+855 71 496 1269",
+    "location": "Siem Reap, Cambodia"
+  },
+  "skills": [
+    { "name": "HTML", "level": "60%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+    { "name": "CSS", "level": "50%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+    { "name": "JavaScript", "level": "40%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+    { "name": "React", "level": "30%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+    { "name": "Vue.js", "level": "30%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+    { "name": "Bootstrap", "level": "30%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
+    { "name": "MySQL", "level": "30%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+    { "name": "Figma", "level": "30%", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+  ],
+  "projects": [
+    {
+      "title": "CMS Project",
+      "tag": "UI Design",
+      "image": "/image/cms.jpg",
+      "description": "Modern shopping experience with responsive design and smooth UX.",
+      "tech": ["PHP", "Bootstrap", "MySQL"],
+      "demo": "#",
+      "github": "https://github.com/sreylinou6-sudo/CMS_Project.git"
+    },
+    {
+      "title": "Personal Portfolio",
+      "tag": "Portfolio",
+      "image": "/image/Profile.jpg",
+      "description": "Responsive developer portfolio with dark/light mode.",
+      "tech": ["HTML", "CSS", "JS"],
+      "demo": "https://portfolio-linart.vercel.app/",
+      "github": "https://github.com/sreylinou6-sudo/Portfolio_linart.git"
+    },
+    {
+      "title": "Smart Tourism Website",
+      "tag": "Website",
+      "image": "/image/Smart_Tourism.jpg",
+      "description": "Responsive developer website with dark/light mode and can change language.",
+      "tech": ["React.js", "CSS"],
+      "demo": "https://smart-tourism-rho.vercel.app/",
+      "github": "https://github.com/sreylinou6-sudo/Smart_Tourism_Website.git"
+    } 
+  ]
+}

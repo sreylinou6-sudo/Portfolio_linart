@@ -578,42 +578,29 @@ section.section-visible > *:nth-child(5){
 .progress-bar{
     height:100%;
     border-radius:50px;
+    background:linear-gradient(90deg, var(--primary), #8b5cf6);
+    box-shadow:0 0 18px rgba(99, 102, 241, 0.35);
 }
 .html{
-    width:60%;
-    background:#e34f26;
+    background:linear-gradient(90deg, #e34f26, #ff8a65);
 }
 .css{
-    width:50%;
-    background:#1572b6;
+    background:linear-gradient(90deg, #1572b6, #59b5ff);
 }
-.js{
-    width:40%;
-    background:#f7df1e;
+.javascript{
+    background:linear-gradient(90deg, #f7df1e, #fbbf24);
 }
 .bootstrap{
-    width:40%;
-    background:#7952b3;
+    background:linear-gradient(90deg, #7952b3, #9f7aea);
 }
-.tailwind{
-    width:40%;
-    background:#38bdf8;
+.reactjs{
+    background:linear-gradient(90deg, #00d1ff, #61dafb);
 }
-.vue{
-    width:30%;
-    background:#42b883;
-}
-.react{
-    width:30%;
-    background:#ff2d20;
+.mysql{
+    background:linear-gradient(90deg, #00618a, #1ecbe1);
 }
 .figma{
-    width:50%;
-    background:#f24e1e;
-}
-.photoshop{
-    width:50%;
-    background:#6b9ae2;
+    background:linear-gradient(90deg, #f24e1e, #ff7d52);
 }
 .skill-card::before{
     content:"";

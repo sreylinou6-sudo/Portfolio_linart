@@ -92,16 +92,19 @@ async function loadPortfolioData() {
         // 1. Render Skills Section
         const skillsContainer = document.querySelector('#skillsContainer') || document.querySelector('.skills-grid');
         if (skillsContainer && data.skills) {
-            skillsContainer.innerHTML = data.skills.map(skill => `
-                <div class="skill-card">
-                    <img src="${skill.icon}" alt="${skill.name}">
-                    <h3>${skill.name}</h3>
-                    <span>${skill.level}</span>
-                    <div class="progress">
-                        <div class="progress-bar" style="width: ${skill.level}"></div>
+            skillsContainer.innerHTML = data.skills.map(skill => {
+                const skillClass = skill.name.toLowerCase().replace(/[^a-z]/g, '');
+                return `
+                    <div class="skill-card">
+                        <img src="${skill.icon}" alt="${skill.name}">
+                        <h3>${skill.name}</h3>
+                        <span>${skill.level}</span>
+                        <div class="progress">
+                            <div class="progress-bar ${skillClass}" style="width: ${skill.level}"></div>
+                        </div>
                     </div>
-                </div>
-            `).join('');
+                `;
+            }).join('');
         }
 
         // 2. Render Projects Section

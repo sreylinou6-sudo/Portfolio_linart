@@ -1,6 +1,9 @@
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.getElementById("navLinks");
 const navBar = document.querySelector("nav");
+const themeToggle = document.getElementById("themeToggle");
+const languageToggle = document.getElementById("languageToggle");
+let currentLanguage = "en";
 
 menuBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
@@ -29,24 +32,80 @@ navLinks.querySelectorAll("a").forEach(link => {
 
 // Typewriter Effect
 const roleElement = document.getElementById("role");
-const roles = [
-    "Frontend Developer",
-    "UX/UI Designer",
-];
+const localizedRoles = {
+    en: ["Full-Stack Developer", "UX/UI Designer"],
+    kh: ["អ្នកអភិវឌ្ឍន៍ Full-Stack", "អ្នករចនា UX/UI"],
+};
 
 let roleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+let roleTimer;
+
+function setLanguage(language) {
+    clearTimeout(roleTimer);
+    currentLanguage = language;
+    document.documentElement.lang = language;
+    document.querySelectorAll("[data-en][data-kh]").forEach(element => {
+        element.textContent = element.dataset[language];
+    });
+    document.querySelectorAll("[data-placeholder-en][data-placeholder-kh]").forEach(element => {
+        element.placeholder = element.dataset[`placeholder${language === "en" ? "En" : "Kh"}`];
+    });
+
+    if (languageToggle) {
+        const nextLanguage = language === "en" ? "Khmer" : "ភាសាអង់គ្លេស";
+        const label = languageToggle.querySelector("span");
+        if (label) label.textContent = language === "en" ? "ខ្មែរ" : "EN";
+        languageToggle.setAttribute("aria-label", `Change language to ${nextLanguage}`);
+        languageToggle.title = `Change language to ${nextLanguage}`;
+    }
+    if (themeToggle) {
+        const themeLabel = language === "en"
+            ? (document.body.classList.contains("dark") ? "Switch to light mode" : "Switch to dark mode")
+            : (document.body.classList.contains("dark") ? "ប្តូរទៅពន្លឺ" : "ប្តូរទៅងងឹត");
+        themeToggle.setAttribute("aria-label", themeLabel);
+        themeToggle.title = themeLabel;
+    }
+
+    roleIndex = 0;
+    charIndex = 0;
+    isDeleting = false;
+    if (roleElement) roleElement.textContent = "";
+}
+
+if (languageToggle) {
+    languageToggle.addEventListener("click", () => {
+        setLanguage(currentLanguage === "en" ? "kh" : "en");
+    });
+}
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+        const isDark = document.body.classList.toggle("dark");
+        const icon = themeToggle.querySelector("i");
+        const label = currentLanguage === "en"
+            ? (isDark ? "Switch to light mode" : "Switch to dark mode")
+            : (isDark ? "ប្តូរទៅពន្លឺ" : "ប្តូរទៅងងឹត");
+        if (icon) {
+            icon.classList.toggle("fa-sun", isDark);
+            icon.classList.toggle("fa-moon", !isDark);
+        }
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        themeToggle.setAttribute("aria-label", label);
+        themeToggle.title = label;
+    });
+}
 
 function typeEffect() {
     if (!roleElement) return;
-    const currentRole = roles[roleIndex];
+    const currentRole = localizedRoles[currentLanguage][roleIndex];
     if (!isDeleting) {
         roleElement.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
         if (charIndex === currentRole.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 1500);
+            roleTimer = setTimeout(typeEffect, 1500);
             return;
         }
     } else {
@@ -55,13 +114,14 @@ function typeEffect() {
         if (charIndex === 0) {
             isDeleting = false;
             roleIndex++;
-            if (roleIndex >= roles.length) {
+            if (roleIndex >= localizedRoles[currentLanguage].length) {
                 roleIndex = 0;
             }
         }
     }
-    setTimeout(typeEffect, isDeleting ? 60 : 120);
+    roleTimer = setTimeout(typeEffect, isDeleting ? 60 : 120);
 }
+setLanguage(currentLanguage);
 typeEffect();
 
 // Reveal sections sequentially when they enter viewport

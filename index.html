@@ -6,7 +6,9 @@
     <title>Portfolio | LINART</title>
     <link rel="stylesheet" href="/style/style.css">
     <link rel="stylesheet" href="/style/Mobile.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300..700;1,300..700&family=Siemreap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -23,7 +25,17 @@
             <li><a href="#projects" data-en="Projects" data-kh="គម្រោង">Projects</a></li>
             <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a></li>
         </ul>
-        <div class="actions" id="navActions"></div>
+        <div class="actions" id="navActions">
+            <button type="button" class="btn-action theme-toggle" id="themeToggle"
+                    aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn-action language-toggle" id="languageToggle"
+                    aria-label="Change language to Khmer" title="Change language to Khmer">
+                <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                <span>ខ្មែរ</span>
+            </button>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -39,18 +51,18 @@
                     <img src="/image/linart.jpg" alt="OU SREYLIN">
                     <div class="status-badge">
                         <span></span>
-                        Available
+                        <span data-en="Available" data-kh="កំពុងរង់ចាំការងារ">Available</span>
                     </div>
                 </div>
             </div>
             <!-- Content -->
             <div class="hero-content">
-                <span class="badge"><i class="fa-solid fa-hand-wave"></i> Hello, I'm linart</span>
+                <span class="badge"><i class="fa-solid fa-hand-wave"></i> <span data-en="Hello, I'm linart" data-kh="សួស្តី ខ្ញុំឈ្មោះ linart">Hello, I'm linart</span></span>
                 <h1>OU<span class="highlight"> SREYLIN</span></h1>
                 <h2 id="role"
-                    data-en="Frontend Developer & UX/UI Designer"
-                    data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer">
-                    Frontend Developer & UX/UI Designer
+                    data-en="Full-Stack Developer & UX/UI Designer"
+                    data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer">
+                    Full-Stack Developer & UX/UI Designer
                 </h2>
                 <p id="heroText"
                     data-en="Creating beautiful, responsive and user-friendly digital experiences."
@@ -58,8 +70,8 @@
                     Creating beautiful, responsive and user-friendly digital experiences.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#" class="btn primary">Download CV</a>
-                    <a href="#contact" class="btn secondary">Contact Me</a>
+                    <a href="#" class="btn primary" data-en="Download CV" data-kh="ទាញយកប្រវត្តិរូប">Download CV</a>
+                    <a href="#contact" class="btn secondary" data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">Contact Me</a>
                 </div>
             </div>
         </div>
@@ -69,7 +81,7 @@
     <section id="about" class="about">
         <div class="about-header">
             <span class="section-badge">
-                <i class="fa-solid fa-user"></i> About Me
+                <i class="fa-solid fa-user"></i> <span data-en="About Me" data-kh="អំពីខ្ញុំ">About Me</span>
             </span>
             <h2 class="section-title" data-en="Who Am I?" data-kh="ខ្ញុំជានរណា?">
                 Who Am I?
@@ -82,15 +94,15 @@
                     <img src="/image/OU_SREYLIN.jpg" alt="OU SREYLIN">
                     <div class="experience-badge">
                         <h3>1+</h3>
-                        <span>Years Experience</span>
+                        <span data-en="Years Experience" data-kh="ឆ្នាំនៃបទពិសោធន៍">Years Experience</span>
                     </div>
                 </div>
             </div>
 
             <!-- RIGHT -->
             <div class="about-content">
-                <h3 data-en="Frontend Developer & UX/UI Designer" data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer">
-                    Frontend Developer & UX/UI Designer
+                <h3 data-en="Full-Stack Developer & UX/UI Designer" data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer">
+                    Full-Stack Developer & UX/UI Designer
                 </h3>
                 <p data-en="I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design. I focus on creating responsive websites, intuitive interfaces, and impactful user experiences."
                    data-kh="ខ្ញុំមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលដ៏ស្រស់ស្អាតដោយប្រើបច្ចេកវិទ្យាវេបសាយទំនើប និងការរចនាដែលផ្តោតលើអ្នកប្រើប្រាស់។">
@@ -100,15 +112,15 @@
                 <div class="about-stats">
                     <div class="stat-card">
                         <h3>3+</h3>
-                        <p>Projects</p>
+                        <p data-en="Projects" data-kh="គម្រោង">Projects</p>
                     </div>
                     <div class="stat-card">
                         <h3>0+</h3>
-                        <p>Clients</p>
+                        <p data-en="Clients" data-kh="អតិថិជន">Clients</p>
                     </div>
                     <div class="stat-card">
                         <h3>100%</h3>
-                        <p>Passion</p>
+                        <p data-en="Passion" data-kh="ចំណង់ចំណូលចិត្ត">Passion</p>
                     </div>
                 </div>
 
@@ -121,7 +133,7 @@
                     <span>Bootstrap</span>
                     <span>MySQL</span>
                 </div>
-                <a href="#contact" class="about-btn">Hire Me →</a>
+                <a href="#contact" class="about-btn" data-en="Hire Me →" data-kh="ជួលខ្ញុំ →">Hire Me →</a>
             </div>
         </div>
     </section>
@@ -130,12 +142,14 @@
     <section id="skills" class="skills">
         <div class="skills-header">
             <span class="section-badge">
-                <i class="fa-solid fa-lightbulb"></i> My Expertise
+                <i class="fa-solid fa-lightbulb"></i> <span data-en="My Expertise" data-kh="ជំនាញរបស់ខ្ញុំ">My Expertise</span>
             </span>
             <h2 class="section-title" data-en="Technical Skills" data-kh="ជំនាញបច្ចេកទេស">
                 Technical Skills
             </h2>
-            <p class="skills-description">
+            <p class="skills-description"
+               data-en="Technologies and tools I use to build modern websites and digital experiences."
+               data-kh="បច្ចេកវិទ្យា និងឧបករណ៍ដែលខ្ញុំប្រើដើម្បីបង្កើតគេហទំព័រ និងបទពិសោធន៍ឌីជីថលទំនើប។">
                 Technologies and tools I use to build modern websites and digital experiences.
             </p>
         </div>
@@ -147,7 +161,7 @@
     <section id="projects" class="projects">
         <div class="projects-header">
             <span class="section-badge">
-                <i class="fa-solid fa-rocket"></i> My Work
+                <i class="fa-solid fa-rocket"></i> <span data-en="My Work" data-kh="ស្នាដៃរបស់ខ្ញុំ">My Work</span>
             </span>
             <h2 class="section-title" data-en="Featured Projects" data-kh="គម្រោងសំខាន់ៗ">
                 Featured Projects
@@ -166,7 +180,7 @@
     <section id="contact" class="contact">
         <div class="contact-header">
             <span class="section-badge">
-                <i class="fa-regular fa-handshake"></i> Get In Touch
+                <i class="fa-regular fa-handshake"></i> <span data-en="Get In Touch" data-kh="ទាក់ទងមកខ្ញុំ">Get In Touch</span>
             </span>
             <h2 class="section-title" data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">
                 Contact Me
@@ -183,21 +197,21 @@
                 <div class="contact-card">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <h3>Email</h3>
+                        <h3 data-en="Email" data-kh="អ៊ីមែល">Email</h3>
                         <p>sreylinou6@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-phone"></i>
                     <div>
-                        <h3>Phone</h3>
+                        <h3 data-en="Phone" data-kh="ទូរស័ព្ទ">Phone</h3>
                         <p>+855 71 496 1269</p>
                     </div>
                 </div>
                 <div class="contact-card">
                     <i class="fas fa-location-dot"></i>
                     <div>
-                        <h3>Location</h3>
+                        <h3 data-en="Location" data-kh="ទីតាំង">Location</h3>
                         <p>Siem Reap, Cambodia</p>
                     </div>
                 </div>
@@ -205,10 +219,10 @@
 
             <!-- Contact Form -->
             <form class="contact-form" action="https://formspree.io/f/mnqyljvd" method="POST">
-                <input type="text" placeholder="Your Name" required> 
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="6" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <input type="text" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-kh="ឈ្មោះរបស់អ្នក" required>
+                <input type="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-kh="អ៊ីមែលរបស់អ្នក" required>
+                <textarea rows="6" placeholder="Your Message" data-placeholder-en="Your Message" data-placeholder-kh="សាររបស់អ្នក" required></textarea>
+                <button type="submit" data-en="Send Message" data-kh="ផ្ញើសារ">Send Message</button>
             </form>
         </div>
     </section>
@@ -218,13 +232,14 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h2>Portfolio | LINART</h2>
-                <p>
+                <p data-en="Frontend Developer & UX/UI Designer passionate about creating modern, responsive and user-friendly digital experiences."
+                   data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer ដែលមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលទំនើប ឆ្លើយតបគ្រប់ឧបករណ៍ និងងាយស្រួលប្រើ។">
                     Frontend Developer & UX/UI Designer passionate about
                     creating modern, responsive and user-friendly digital experiences.
                 </p>
             </div>
             <div class="footer-section">
-                <h3>Quick Links</h3>
+                <h3 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h3>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -234,13 +249,13 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>Contact</h3>
+                <h3 data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</h3>
                 <p><i class="fa-solid fa-map-pin"></i> Siem Reap, Cambodia</p>
                 <p><i class="fa-regular fa-envelope"></i> sreylinou6@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i> +855 71 496 1269</p>
             </div>
             <div class="footer-section">
-                <h3>Follow Me</h3>
+                <h3 data-en="Follow Me" data-kh="តាមដានខ្ញុំ">Follow Me</h3>
                 <div class="social-links">
                     <a href="https://www.facebook.com/share/1KXekvp1Ln/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://github.com/sreylinou6-sudo" target="_blank"><i class="fab fa-github"></i></a>
@@ -252,7 +267,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2026 Portfolio | LINART. All Rights Reserved.</p>
+            <p data-en="© 2026 Portfolio | LINART. All Rights Reserved."
+               data-kh="© 2026 Portfolio | LINART។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 Portfolio | LINART. All Rights Reserved.</p>
         </div>
     </footer>
 

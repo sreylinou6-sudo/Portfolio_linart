@@ -4,248 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio | LINART</title>
+    <meta name="description" content="OU SREYLIN – Full-Stack Developer & UX/UI Designer based in Siem Reap, Cambodia.">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Apply saved theme BEFORE paint (prevents flash of wrong theme) -->
+    <script>
+        (function () {
+            var d = document.documentElement;
+            d.classList.add('js');
+            var t = null;
+            try { t = localStorage.getItem('theme'); } catch (e) {}
+            if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            d.setAttribute('data-theme', t);
+        })();
+    </script>
+
     <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/Mobile.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,300..700;1,300..700&family=Siemreap&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- NAVBAR -->
-    <nav class="navbar">
-        <div class="logo">Portfolio | LINART</div>
-        <button id="menuBtn" class="menu-btn" aria-label="Toggle Navigation">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#home" data-en="Home" data-kh="ទំព័រដើម">Home</a></li>
-            <li><a href="#about" data-en="About" data-kh="អំពីខ្ញុំ">About</a></li>
-            <li><a href="#skills" data-en="Skills" data-kh="ជំនាញ">Skills</a></li>
-            <li><a href="#projects" data-en="Projects" data-kh="គម្រោង">Projects</a></li>
-            <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a></li>
-        </ul>
-        <div class="actions" id="navActions">
-            <button type="button" class="btn-action theme-toggle" id="themeToggle"
-                    aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
-                <i class="fa-solid fa-moon" aria-hidden="true"></i>
-            </button>
-            <button type="button" class="btn-action language-toggle" id="languageToggle"
-                    aria-label="Change language to Khmer" title="Change language to Khmer">
-                <i class="fa-solid fa-globe" aria-hidden="true"></i>
-                <span>ខ្មែរ</span>
-            </button>
-        </div>
-    </nav>
+    <header class="nav-wrap">
+        <nav class="navbar" id="navbar">
+            <a href="#home" class="logo">Portfolio <span>|</span> LINART</a>
 
-    <!-- HERO -->
-    <section id="home" class="hero">
-        <div class="floating circle1"></div>
-        <div class="floating circle2"></div>
-        <div class="floating circle3"></div>
-        <div class="hero-container">
-            <!-- Profile Image -->
-            <div class="hero-image">
-                <div class="profile-wrapper">
-                    <div class="profile-ring"></div>
-                    <img src="/image/linart.jpg" alt="OU SREYLIN">
-                    <div class="status-badge">
-                        <span></span>
-                        <span data-en="Available" data-kh="កំពុងរង់ចាំការងារ">Available</span>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-en="Home" data-kh="ទំព័រដើម">Home</a></li>
+                <li><a href="#about" data-en="About" data-kh="អំពីខ្ញុំ">About</a></li>
+                <li><a href="#skills" data-en="Skills" data-kh="ជំនាញ">Skills</a></li>
+                <li><a href="#projects" data-en="Projects" data-kh="គម្រោង">Projects</a></li>
+                <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a></li>
+            </ul>
+
+            <div class="actions">
+                <button type="button" class="btn-action" id="themeToggle"
+                        aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn-action language-toggle" id="languageToggle"
+                        aria-label="Change language to Khmer" title="Change language to Khmer">
+                    <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                    <span>ខ្មែរ</span>
+                </button>
+                <button id="menuBtn" class="menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="home" class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <span class="blob blob-1"></span>
+                <span class="blob blob-2"></span>
+                <span class="blob blob-3"></span>
+                <span class="grid-lines"></span>
+            </div>
+
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="badge reveal">
+                        <span class="pulse-dot"></span>
+                        <span data-en="Available for work · Siem Reap" data-kh="កំពុងរង់ចាំការងារ · សៀមរាប">Available for work · Siem Reap</span>
+                    </span>
+
+                    <p class="hello reveal" style="--d:.08s">
+                        <span data-en="Hello, I'm" data-kh="សួស្តី ខ្ញុំឈ្មោះ">Hello, I'm</span> linart 👋
+                    </p>
+
+                    <h1 class="reveal" style="--d:.14s">OU <span class="gradient-text">SREYLIN</span></h1>
+
+                    <h2 class="role reveal" style="--d:.2s" aria-label="Full-Stack Developer and UX/UI Designer">
+                        <span id="typed"></span><span class="caret" aria-hidden="true"></span>
+                    </h2>
+
+                    <p class="hero-text reveal" style="--d:.26s"
+                       data-en="I design and build beautiful, responsive and user-friendly digital experiences — from pixel-perfect interfaces to solid back-end logic."
+                       data-kh="ខ្ញុំរចនា និងបង្កើតបទពិសោធន៍ឌីជីថលដែលស្រស់ស្អាត ឆ្លើយតបគ្រប់ឧបករណ៍ និងងាយស្រួលប្រើប្រាស់ ចាប់ពីចំណុចប្រទាក់ដ៏ស្អាត រហូតដល់ Back-end ដ៏រឹងមាំ។">
+                        I design and build beautiful, responsive and user-friendly digital experiences — from pixel-perfect interfaces to solid back-end logic.
+                    </p>
+
+                    <div class="hero-buttons reveal" style="--d:.32s">
+                        <a href="/cv/OU_SREYLIN_CV.pdf" download class="btn primary">
+                            <i class="fa-solid fa-download"></i>
+                            <span data-en="Download CV" data-kh="ទាញយកប្រវត្តិរូប">Download CV</span>
+                        </a>
+                        <a href="#contact" class="btn secondary">
+                            <span data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">Contact Me</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-meta reveal" style="--d:.4s">
+                        <div class="social-mini">
+                            <a href="https://github.com/sreylinou6-sudo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/sreylin-ou-1a00b4393" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://t.me/ou_sreylin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                        </div>
+                        <span class="divider"></span>
+                        <div class="hero-mini-stat"><strong>1+</strong><span data-en="Year exp." data-kh="ឆ្នាំបទពិសោធន៍">Year exp.</span></div>
+                        <div class="hero-mini-stat"><strong>3+</strong><span data-en="Projects" data-kh="គម្រោង">Projects</span></div>
+                    </div>
+                </div>
+
+                <div class="hero-image reveal" style="--d:.18s">
+                    <div class="profile-wrapper">
+                        <div class="profile-ring"></div>
+                        <div class="profile-photo">
+                            <img src="/image/OU_SREYLIN.jpg" alt="OU SREYLIN" width="380" height="380">
+                        </div>
+
+                        <div class="chip chip-one"><i class="fa-solid fa-pen-nib"></i> Illustration</div>
+                        <div class="chip chip-two"><i class="fa-solid fa-palette"></i> UX/UI Design</div>
+                        <div class="chip chip-three"><i class="fa-solid fa-code"></i> Full-Stack</div>
                     </div>
                 </div>
             </div>
-            <!-- Content -->
-            <div class="hero-content">
-                <span class="badge"><i class="fa-solid fa-hand-wave"></i> <span data-en="Hello, I'm linart" data-kh="សួស្តី ខ្ញុំឈ្មោះ linart">Hello, I'm linart</span></span>
-                <h1>OU<span class="highlight"> SREYLIN</span></h1>
-                <h2 id="role"
-                    data-en="Full-Stack Developer & UX/UI Designer"
-                    data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer">
-                    Full-Stack Developer & UX/UI Designer
-                </h2>
-                <p id="heroText"
-                    data-en="Creating beautiful, responsive and user-friendly digital experiences."
-                    data-kh="បង្កើតបទពិសោធន៍ឌីជីថលដែលស្រស់ស្អាត និងងាយស្រួលប្រើប្រាស់។">
-                    Creating beautiful, responsive and user-friendly digital experiences.
+
+            <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-user"></i> <span data-en="About Me" data-kh="អំពីខ្ញុំ">About Me</span></span>
+                <h2 class="section-title" data-en="Who Am I?" data-kh="ខ្ញុំជានរណា?">Who Am I?</h2>
+            </div>
+
+            <div class="about-container">
+                <div class="about-image reveal">
+                    <div class="image-card">
+                        <img src="/image/OU_SREYLIN.jpg" alt="OU SREYLIN" loading="lazy">
+                        <div class="experience-badge">
+                            <h3>1+</h3>
+                            <span data-en="Years Experience" data-kh="ឆ្នាំនៃបទពិសោធន៍">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <h3 class="reveal" data-en="Full-Stack Developer & UX/UI Designer" data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer">Full-Stack Developer & UX/UI Designer</h3>
+                    <p class="reveal" style="--d:.08s"
+                       data-en="I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design. I focus on creating responsive websites, intuitive interfaces, and impactful user experiences."
+                       data-kh="ខ្ញុំមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលដ៏ស្រស់ស្អាតដោយប្រើបច្ចេកវិទ្យាវេបសាយទំនើប និងការរចនាដែលផ្តោតលើអ្នកប្រើប្រាស់។ ខ្ញុំផ្តោតលើការបង្កើតគេហទំព័រ ឆ្លើយតបគ្រប់ឧបករណ៍ ចំណុចប្រទាក់ងាយស្រួលប្រើ និងបទពិសោធន៍អ្នកប្រើប្រាស់ដែលមានឥទ្ធិពល។">
+                        I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design. I focus on creating responsive websites, intuitive interfaces, and impactful user experiences.
+                    </p>
+
+                    <div class="about-stats reveal" style="--d:.14s">
+                        <div class="stat-card"><h3>3+</h3><p data-en="Projects" data-kh="គម្រោង">Projects</p></div>
+                        <div class="stat-card"><h3>7+</h3><p data-en="Technologies" data-kh="បច្ចេកវិទ្យា">Technologies</p></div>
+                        <div class="stat-card"><h3>100%</h3><p data-en="Passion" data-kh="ចំណង់ចំណូលចិត្ត">Passion</p></div>
+                    </div>
+
+                    <div class="mini-skills reveal" style="--d:.2s">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <span>React.js</span><span>Bootstrap</span><span>MySQL</span><span>Figma</span>
+                    </div>
+
+                    <a href="#contact" class="btn primary reveal" style="--d:.26s" data-en="Hire Me →" data-kh="ជួលខ្ញុំ →">Hire Me →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section skills">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-lightbulb"></i> <span data-en="My Expertise" data-kh="ជំនាញរបស់ខ្ញុំ">My Expertise</span></span>
+                <h2 class="section-title" data-en="Technical Skills" data-kh="ជំនាញបច្ចេកទេស">Technical Skills</h2>
+                <p class="section-description"
+                   data-en="Technologies and tools I use to build modern websites and digital experiences."
+                   data-kh="បច្ចេកវិទ្យា និងឧបករណ៍ដែលខ្ញុំប្រើដើម្បីបង្កើតគេហទំព័រ និងបទពិសោធន៍ឌីជីថលទំនើប។">
+                    Technologies and tools I use to build modern websites and digital experiences.
                 </p>
-                <div class="hero-buttons">
-                    <a href="#" class="btn primary" data-en="Download CV" data-kh="ទាញយកប្រវត្តិរូប">Download CV</a>
-                    <a href="#contact" class="btn secondary" data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">Contact Me</a>
-                </div>
             </div>
-        </div>
-    </section>
+            <div class="skills-grid" id="skillsContainer"></div>
+        </section>
 
-    <!-- ABOUT -->
-    <section id="about" class="about">
-        <div class="about-header">
-            <span class="section-badge">
-                <i class="fa-solid fa-user"></i> <span data-en="About Me" data-kh="អំពីខ្ញុំ">About Me</span>
-            </span>
-            <h2 class="section-title" data-en="Who Am I?" data-kh="ខ្ញុំជានរណា?">
-                Who Am I?
-            </h2>
-        </div>
-        <div class="about-container">
-            <!-- LEFT -->
-            <div class="about-image">
-                <div class="image-card">
-                    <img src="/image/OU_SREYLIN.jpg" alt="OU SREYLIN">
-                    <div class="experience-badge">
-                        <h3>1+</h3>
-                        <span data-en="Years Experience" data-kh="ឆ្នាំនៃបទពិសោធន៍">Years Experience</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- RIGHT -->
-            <div class="about-content">
-                <h3 data-en="Full-Stack Developer & UX/UI Designer" data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer">
-                    Full-Stack Developer & UX/UI Designer
-                </h3>
-                <p data-en="I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design. I focus on creating responsive websites, intuitive interfaces, and impactful user experiences."
-                   data-kh="ខ្ញុំមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលដ៏ស្រស់ស្អាតដោយប្រើបច្ចេកវិទ្យាវេបសាយទំនើប និងការរចនាដែលផ្តោតលើអ្នកប្រើប្រាស់។">
-                    I am passionate about crafting beautiful digital experiences through modern web technologies and user-centered design.
+        <!-- PROJECTS -->
+        <section id="projects" class="section projects">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-solid fa-rocket"></i> <span data-en="My Work" data-kh="ស្នាដៃរបស់ខ្ញុំ">My Work</span></span>
+                <h2 class="section-title" data-en="Featured Projects" data-kh="គម្រោងសំខាន់ៗ">Featured Projects</h2>
+                <p class="section-description"
+                   data-en="A collection of projects showcasing my frontend development and UX/UI design skills."
+                   data-kh="បណ្តុំគម្រោងដែលបង្ហាញពីជំនាញ Frontend Development និង UX/UI Design របស់ខ្ញុំ។">
+                    A collection of projects showcasing my frontend development and UX/UI design skills.
                 </p>
-                <!-- STATS -->
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <h3>3+</h3>
-                        <p data-en="Projects" data-kh="គម្រោង">Projects</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>0+</h3>
-                        <p data-en="Clients" data-kh="អតិថិជន">Clients</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>100%</h3>
-                        <p data-en="Passion" data-kh="ចំណង់ចំណូលចិត្ត">Passion</p>
-                    </div>
-                </div>
-
-                <!-- SKILLS BADGES -->
-                <div class="mini-skills">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React.js</span>
-                    <span>Bootstrap</span>
-                    <span>MySQL</span>
-                </div>
-                <a href="#contact" class="about-btn" data-en="Hire Me →" data-kh="ជួលខ្ញុំ →">Hire Me →</a>
             </div>
-        </div>
-    </section>
+            <div class="projects-grid" id="projectsContainer"></div>
+        </section>
 
-    <!-- SKILLS SECTION (Dynamic via JSON) -->
-    <section id="skills" class="skills">
-        <div class="skills-header">
-            <span class="section-badge">
-                <i class="fa-solid fa-lightbulb"></i> <span data-en="My Expertise" data-kh="ជំនាញរបស់ខ្ញុំ">My Expertise</span>
-            </span>
-            <h2 class="section-title" data-en="Technical Skills" data-kh="ជំនាញបច្ចេកទេស">
-                Technical Skills
-            </h2>
-            <p class="skills-description"
-               data-en="Technologies and tools I use to build modern websites and digital experiences."
-               data-kh="បច្ចេកវិទ្យា និងឧបករណ៍ដែលខ្ញុំប្រើដើម្បីបង្កើតគេហទំព័រ និងបទពិសោធន៍ឌីជីថលទំនើប។">
-                Technologies and tools I use to build modern websites and digital experiences.
-            </p>
-        </div>
-        <!-- ទីតាំងបង្ហាញ Skills Dynamic -->
-        <div class="skills-grid" id="skillsContainer"></div>
-    </section>
-
-    <!-- PROJECTS SECTION (Dynamic via JSON) -->
-    <section id="projects" class="projects">
-        <div class="projects-header">
-            <span class="section-badge">
-                <i class="fa-solid fa-rocket"></i> <span data-en="My Work" data-kh="ស្នាដៃរបស់ខ្ញុំ">My Work</span>
-            </span>
-            <h2 class="section-title" data-en="Featured Projects" data-kh="គម្រោងសំខាន់ៗ">
-                Featured Projects
-            </h2>
-            <p class="section-description"
-               data-en="A collection of projects showcasing my frontend development and UX/UI design skills."
-               data-kh="បណ្តុំគម្រោងដែលបង្ហាញពីជំនាញ Frontend Development និង UX/UI Design របស់ខ្ញុំ។">
-                A collection of projects showcasing my frontend development and UX/UI design skills.
-            </p>
-        </div>
-        <!-- ទីតាំងបង្ហាញ Projects Dynamic -->
-        <div class="projects-grid" id="projectsContainer"></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact">
-        <div class="contact-header">
-            <span class="section-badge">
-                <i class="fa-regular fa-handshake"></i> <span data-en="Get In Touch" data-kh="ទាក់ទងមកខ្ញុំ">Get In Touch</span>
-            </span>
-            <h2 class="section-title" data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">
-                Contact Me
-            </h2>
-            <p data-en="Feel free to contact me for collaboration, freelance projects, or job opportunities."
-               data-kh="អ្នកអាចទាក់ទងមកខ្ញុំសម្រាប់ការសហការ ការងារ Freelance ឬឱកាសការងារផ្សេងៗ។">
-                Feel free to contact me for collaboration, freelance projects, or job opportunities.
-            </p>
-        </div>
-
-        <div class="contact-container">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <div class="contact-card">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3 data-en="Email" data-kh="អ៊ីមែល">Email</h3>
-                        <p>sreylinou6@gmail.com</p>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3 data-en="Phone" data-kh="ទូរស័ព្ទ">Phone</h3>
-                        <p>+855 71 496 1269</p>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <i class="fas fa-location-dot"></i>
-                    <div>
-                        <h3 data-en="Location" data-kh="ទីតាំង">Location</h3>
-                        <p>Siem Reap, Cambodia</p>
-                    </div>
-                </div>
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <div class="section-header reveal">
+                <span class="section-badge"><i class="fa-regular fa-handshake"></i> <span data-en="Get In Touch" data-kh="ទាក់ទងមកខ្ញុំ">Get In Touch</span></span>
+                <h2 class="section-title" data-en="Contact Me" data-kh="ទាក់ទងមកខ្ញុំ">Contact Me</h2>
+                <p class="section-description"
+                   data-en="Feel free to contact me for collaboration, freelance projects, or job opportunities."
+                   data-kh="អ្នកអាចទាក់ទងមកខ្ញុំសម្រាប់ការសហការ ការងារ Freelance ឬឱកាសការងារផ្សេងៗ។">
+                    Feel free to contact me for collaboration, freelance projects, or job opportunities.
+                </p>
             </div>
 
-            <!-- Contact Form -->
-            <form class="contact-form" action="https://formspree.io/f/mnqyljvd" method="POST">
-                <input type="text" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-kh="ឈ្មោះរបស់អ្នក" required>
-                <input type="email" placeholder="Your Email" data-placeholder-en="Your Email" data-placeholder-kh="អ៊ីមែលរបស់អ្នក" required>
-                <textarea rows="6" placeholder="Your Message" data-placeholder-en="Your Message" data-placeholder-kh="សាររបស់អ្នក" required></textarea>
-                <button type="submit" data-en="Send Message" data-kh="ផ្ញើសារ">Send Message</button>
-            </form>
-        </div>
-    </section>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <a class="contact-card reveal" href="mailto:sreylinou6@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        <div><h3 data-en="Email" data-kh="អ៊ីមែល">Email</h3><p>sreylinou6@gmail.com</p></div>
+                    </a>
+                    <a class="contact-card reveal" style="--d:.08s" href="tel:+855714961269">
+                        <i class="fas fa-phone"></i>
+                        <div><h3 data-en="Phone" data-kh="ទូរស័ព្ទ">Phone</h3><p>+855 71 496 1269</p></div>
+                    </a>
+                    <div class="contact-card reveal" style="--d:.16s">
+                        <i class="fas fa-location-dot"></i>
+                        <div><h3 data-en="Location" data-kh="ទីតាំង">Location</h3><p>Siem Reap, Cambodia</p></div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mnqyljvd" method="POST" style="--d:.1s">
+                    <label class="field">
+                        <input type="text" name="name" placeholder=" " required>
+                        <span data-en="Your Name" data-kh="ឈ្មោះរបស់អ្នក">Your Name</span>
+                    </label>
+                    <label class="field">
+                        <input type="email" name="email" placeholder=" " required>
+                        <span data-en="Your Email" data-kh="អ៊ីមែលរបស់អ្នក">Your Email</span>
+                    </label>
+                    <label class="field">
+                        <textarea name="message" rows="6" placeholder=" " required></textarea>
+                        <span data-en="Your Message" data-kh="សាររបស់អ្នក">Your Message</span>
+                    </label>
+                    <button type="submit" class="btn primary" id="formBtn">
+                        <span data-en="Send Message" data-kh="ផ្ញើសារ">Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
                 <h2>Portfolio | LINART</h2>
-                <p data-en="Frontend Developer & UX/UI Designer passionate about creating modern, responsive and user-friendly digital experiences."
-                   data-kh="អ្នកអភិវឌ្ឍន៍ Frontend និង UX/UI Designer ដែលមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលទំនើប ឆ្លើយតបគ្រប់ឧបករណ៍ និងងាយស្រួលប្រើ។">
-                    Frontend Developer & UX/UI Designer passionate about
-                    creating modern, responsive and user-friendly digital experiences.
+                <p data-en="Full-Stack Developer & UX/UI Designer passionate about creating modern, responsive and user-friendly digital experiences."
+                   data-kh="អ្នកអភិវឌ្ឍន៍ Full-Stack និង UX/UI Designer ដែលមានចំណង់ចំណូលចិត្តក្នុងការបង្កើតបទពិសោធន៍ឌីជីថលទំនើប ឆ្លើយតបគ្រប់ឧបករណ៍ និងងាយស្រួលប្រើ។">
+                    Full-Stack Developer & UX/UI Designer passionate about creating modern, responsive and user-friendly digital experiences.
                 </p>
             </div>
             <div class="footer-section">
                 <h3 data-en="Quick Links" data-kh="តំណភ្ជាប់រហ័ស">Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-en="Home" data-kh="ទំព័រដើម">Home</a></li>
+                    <li><a href="#about" data-en="About" data-kh="អំពីខ្ញុំ">About</a></li>
+                    <li><a href="#skills" data-en="Skills" data-kh="ជំនាញ">Skills</a></li>
+                    <li><a href="#projects" data-en="Projects" data-kh="គម្រោង">Projects</a></li>
+                    <li><a href="#contact" data-en="Contact" data-kh="ទំនាក់ទំនង">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -257,12 +281,12 @@
             <div class="footer-section">
                 <h3 data-en="Follow Me" data-kh="តាមដានខ្ញុំ">Follow Me</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/share/1KXekvp1Ln/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://github.com/sreylinou6-sudo" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/sreylin-ou-1a00b4393" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/_sreylin_80?igsh=MTB6aXM4MGdzeDN4Zw%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://t.me/ou_sreylin" target="_blank"><i class="fab fa-telegram"></i></a>
-                    <a href="https://www.tiktok.com/@_sreylin_80?_r=1&_t=ZS-95FiKUDwQYm" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/share/1KXekvp1Ln/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/sreylinou6-sudo" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sreylin-ou-1a00b4393" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/_sreylin_80?igsh=MTB6aXM4MGdzeDN4Zw%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://t.me/ou_sreylin" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.tiktok.com/@_sreylin_80?_r=1&_t=ZS-95FiKUDwQYm" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
         </div>
@@ -271,6 +295,8 @@
                data-kh="© 2026 Portfolio | LINART។ រក្សាសិទ្ធិគ្រប់យ៉ាង។">© 2026 Portfolio | LINART. All Rights Reserved.</p>
         </div>
     </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <script src="/js/main.js"></script>
 </body>

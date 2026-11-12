@@ -19,7 +19,7 @@
     {
       "title": "CMS Project",
       "tag": "UI Design",
-      "image": "/image/cms.jpg",
+      "image": "/image/cms_project.png",
       "description": "Modern shopping experience with responsive design and smooth UX.",
       "tech": ["PHP", "Bootstrap", "MySQL"],
       "demo": "#",
@@ -28,7 +28,7 @@
     {
       "title": "Personal Portfolio",
       "tag": "Portfolio",
-      "image": "/image/Profile.jpg",
+      "image": "/image/portfolio.png",
       "description": "Responsive developer portfolio with dark/light mode.",
       "tech": ["HTML", "CSS", "JS"],
       "demo": "https://portfolio-linart.vercel.app/",
@@ -37,7 +37,7 @@
     {
       "title": "Smart Tourism Website",
       "tag": "Website",
-      "image": "/image/Smart_Tourism.jpg",
+      "image": "/image/STS_Poster.png",
       "description": "Responsive developer website with dark/light mode and can change language.",
       "tech": ["React.js", "CSS"],
       "demo": "https://smart-tourism-rho.vercel.app/",

@@ -18,7 +18,7 @@
   "projects": [
     {
       "title": "CMS Project",
-      "tag": "UI Design",
+      "tag": "Web Appilication",
       "image": "/image/cms_project.png",
       "description": "Modern shopping experience with responsive design and smooth UX.",
       "tech": ["PHP", "Bootstrap", "MySQL"],
@@ -42,6 +42,15 @@
       "tech": ["React.js", "CSS"],
       "demo": "https://smart-tourism-rho.vercel.app/",
       "github": "https://github.com/sreylinou6-sudo/Smart_Tourism_Website.git"
-    } 
+    },
+    {
+      "title": "Note App with Android Studio",
+      "tag": "Mobile App",
+      "image": "/image/NoteApp.png",
+      "description": "A simple note-taking app built with Android Studio.",
+      "tech": ["Java", "XML"],
+      "demo": "#",
+      "github": "https://github.com/sreylinou6-sudo/NoteApp_Android.git"
+    }  
   ]
 }
